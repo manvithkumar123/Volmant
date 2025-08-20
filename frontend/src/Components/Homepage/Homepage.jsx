@@ -24,78 +24,99 @@ return (
         <video src="https://res.cloudinary.com/dvd8yytqv/video/upload/v1753872908/1753461599781_tibayl.mov"  autoPlay loop playsInline muted></video>
         </div>
     <div className="premium_watches">
-      {data &&(
+      {data?.length >= 3 ? (
         <>
           <div className="watch_vertical_container">
-            <div className="premium_watch_container"  onClick={()=>handlProductClick(data[0]._id)}>
-              <img src={data[0].ImageUrl} alt="" />
+            <div
+              className="premium_watch_container"
+              onClick={() => handlProductClick(data?.[0]?._id)}
+            >
+              <img src={data?.[0]?.ImageUrl} alt="" />
               <div className="cover_text">
                 <div className="text_container_hover">
-                <h1 style={{textDecoration:"underline"}}>{data[0].watchname}</h1>
-                <h3>Nature Inspired, meaning Greenary</h3>
-                <>{
-                          currency === "INR" ? (
-                            <h3>{data[0].Rupee}₹</h3>
-                          ) : currency === "USD" ? (
-                            <h3>{data[0].Dollar}$</h3>
-                          ) : currency === "EUR" ? (
-                            <h3>{data[0].Euro}€</h3>
-                          ) : (
-                            <h3>{data[0].Rupee}₹</h3>
-                          )
-                }</>
+                  <h1 style={{ textDecoration: "underline" }}>
+                    {data?.[0]?.watchname}
+                  </h1>
+                  <h3>Nature Inspired, meaning Greenary</h3>
+                  <>
+                    {currency === "INR" ? (
+                      <h3>{data?.[0]?.Rupee}₹</h3>
+                    ) : currency === "USD" ? (
+                      <h3>{data?.[0]?.Dollar}$</h3>
+                    ) : currency === "EUR" ? (
+                      <h3>{data?.[0]?.Euro}€</h3>
+                    ) : (
+                      <h3>{data?.[0]?.Rupee}₹</h3>
+                    )}
+                  </>
                 </div>
               </div>
             </div>
-            <div className="premium_watch_container" style={{marginTop:"40px"}} onClick={()=>handlProductClick(data[2]._id)}>
-              <img src={data[2].ImageUrl} alt="" />
+            <div
+              className="premium_watch_container"
+              style={{ marginTop: "40px" }}
+              onClick={() => handlProductClick(data?.[2]?._id)}
+            >
+              <img src={data?.[2]?.ImageUrl} alt="" />
               <div className="cover_text">
                 <div className="text_container_hover">
-                <h1 style={{textDecoration:"underline"}}>{data[2].watchname}</h1>
-                <h3>French-inspired, meaning chronicle</h3>
-                <>{
-                          currency === "INR" ? (
-                            <h3>{data[2].Rupee}₹</h3>
-                          ) : currency === "USD" ? (
-                            <h3>{data[2].Dollar}$</h3>
-                          ) : currency === "EUR" ? (
-                            <h3>{data[2].Euro}€</h3>
-                          ) : (
-                            <h3>{data[2].Rupee}₹</h3>
-                          )
-                }</>
+                  <h1 style={{ textDecoration: "underline" }}>
+                    {data?.[2]?.watchname}
+                  </h1>
+                  <h3>French-inspired, meaning chronicle</h3>
+                  <>
+                    {currency === "INR" ? (
+                      <h3>{data?.[2]?.Rupee}₹</h3>
+                    ) : currency === "USD" ? (
+                      <h3>{data?.[2]?.Dollar}$</h3>
+                    ) : currency === "EUR" ? (
+                      <h3>{data?.[2]?.Euro}€</h3>
+                    ) : (
+                      <h3>{data?.[2]?.Rupee}₹</h3>
+                    )}
+                  </>
                 </div>
               </div>
             </div>
           </div>
           <div className="watch_horizontal_container">
-            <div className="premium_watch_container_side" onClick={()=>handlProductClick(data[1]._id)}>
-              <img src={data[1].ImageUrl} alt="" />
+            <div
+              className="premium_watch_container_side"
+              onClick={() => handlProductClick(data?.[1]?._id)}
+            >
+              <img src={data?.[1]?.ImageUrl} alt="" />
               <div className="cover_text">
                 <div className="text_container_hover">
-                <h1 style={{textDecoration:"underline"}}>{data[1].watchname}</h1>
-                <h3>Inspired by eclipse + precision</h3>
-                <>{
-                          currency === "INR" ? (
-                            <h3>{data[1].Rupee}₹</h3>
-                          ) : currency === "USD" ? (
-                            <h3>{data[1].Dollar}$</h3>
-                          ) : currency === "EUR" ? (
-                            <h3>{data[1].Euro}€</h3>
-                          ) : (
-                            <h3>{data[1].Rupee}₹</h3>
-                          )
-                }</>
+                  <h1 style={{ textDecoration: "underline" }}>
+                    {data?.[1]?.watchname}
+                  </h1>
+                  <h3>Inspired by eclipse + precision</h3>
+                  <>
+                    {currency === "INR" ? (
+                      <h3>{data?.[1]?.Rupee}₹</h3>
+                    ) : currency === "USD" ? (
+                      <h3>{data?.[1]?.Dollar}$</h3>
+                    ) : currency === "EUR" ? (
+                      <h3>{data?.[1]?.Euro}€</h3>
+                    ) : (
+                      <h3>{data?.[1]?.Rupee}₹</h3>
+                    )}
+                  </>
                 </div>
               </div>
             </div>
             <div className="label">
-            <h1>PREMIUM</h1>
-            <h1 style={{marginLeft:"50px"}}>WATCHES</h1>
+              <h1>PREMIUM</h1>
+              <h1 style={{ marginLeft: "50px" }}>WATCHES</h1>
             </div>
           </div>
-          </>)}
-          </div>
+        </>
+      ) : (
+        <div style={{ textAlign: "center", padding: "40px", fontSize: "1.5em" }}>
+          Loading premium watches...
+        </div>
+      )}
+    </div>
     <div className="category_page">
         <div className="flex_container_category">
             <div className="watch_category" onClick={() => navigate('/Product/analog')} style={{ cursor: 'pointer' }}>
