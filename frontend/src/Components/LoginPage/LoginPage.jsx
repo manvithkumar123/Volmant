@@ -14,7 +14,7 @@ const LoginPage = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('/api/login/login', { Username: email, Password: password }, { withCredentials: true });
+      const response = await axios.post('https://volmant.onrender.com/api/login/login', { Username: email, Password: password }, { withCredentials: true });
       if (response.data.adminlogin) {
         setadmin(true);
         setUsername("Manvith");
@@ -46,7 +46,7 @@ const LoginPage = () => {
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('/api/login/signup', { Username: email, Password: password });
+      await axios.post('https://volmant.onrender.com/api/login/signup', { Username: email, Password: password });
       alert('User created');
       setSignup(false);
       setEmail("");
@@ -57,7 +57,7 @@ const LoginPage = () => {
   };
   useEffect(() => {
     // Check authentication status on component mount to persist login state
-    axios.get("/api/login/check-auth", { withCredentials: true })
+    axios.get("https://volmant.onrender.com/api/login/check-auth", { withCredentials: true })
       .then(res => {
         if (res.data.loggedIn) {
           setLoggedIn(true);
@@ -90,7 +90,7 @@ const LoginPage = () => {
   // Logout handler to clear localStorage and update state
   const handleLogout = (e) => {
     e.preventDefault();
-    axios.get("/api/login/logout", { withCredentials: true })
+    axios.get("https://volmant.onrender.com/api/login/logout", { withCredentials: true })
       .then(() => {
         setLoggedIn(false);
         setadmin(false);

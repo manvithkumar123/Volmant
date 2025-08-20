@@ -12,7 +12,7 @@ const ProductPage = () => {
   const[data,setdata]=useState([])
   const [loading, setLoading] = useState(true);
   useEffect(() =>{  setLoading(true);
-    axios.get(`/api/${type}/view`)
+    axios.get(`https://volmant.onrender.com/api/${type}/view`)
     .then(res => {
       if (Array.isArray(res.data)) {
         setdata(res.data);
@@ -76,7 +76,7 @@ const ProductPage = () => {
                       e.stopPropagation();
                       try {
                         const res = await axios.post(
-                          "/api/cart/add",
+                          "https://volmant.onrender.com/api/cart/add",
                           {
                             productId: item._id,
                             productType: type

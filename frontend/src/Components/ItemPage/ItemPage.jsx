@@ -9,7 +9,7 @@ const ItemPage = () => {
     const { id, type } = useParams();
     const[data,setdata]=useState(null);
     useEffect(()=>{
-        axios.get(`/api/${type}/view/${id}`)
+        axios.get(`https://volmant.onrender.com/api/${type}/view/${id}`)
         .then(res =>setdata(res.data))
         .catch(error => console.log(error))
     },[id])
@@ -46,7 +46,7 @@ const ItemPage = () => {
                       e.stopPropagation();
                       try {
                         const res = await axios.post(
-                          "/api/cart/add",
+                          "https://volmant.onrender.com/api/cart/add",
                           {
                             productId: data._id,
                             productType: type

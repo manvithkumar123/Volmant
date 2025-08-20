@@ -14,7 +14,7 @@ const Cartpage = () => {
     loadStripe("pk_test_51RyAWTIkUBOokg8wAGt4eF4F8evdPjUZimzCoX4jQTRWvKAl56gMWNnnlT0aIbnyfTb5WU8AvIEkYV3ObCg3PGmq00Oxgp3YDb") // replace with your actual test publishable key
   );
   useEffect(() => {
-    fetch("/api/cart", { credentials: "include" })
+    fetch("https://volmant.onrender.com/api/cart", { credentials: "include" })
     .then(res => {
       if (res.status === 401) {
         setIsLogged(false);
@@ -48,7 +48,7 @@ const Cartpage = () => {
     }
 
     try {
-      const response = await fetch(`/api/cart/remove/${itemToRemove._id}`, {
+      const response = await fetch(`https://volmant.onrender.com/api/cart/remove/${itemToRemove._id}`, {
         method: 'DELETE',
         credentials: 'include',
       });
@@ -102,7 +102,7 @@ const Cartpage = () => {
                   const totalAmount = cartItems.reduce((sum, item) => sum + (Number(item.productId?.Rupee) || 0) * item.quantity, 0);
                   try {
                     // Call backend to create checkout session
-                    const response = await fetch("/api/create-checkout-session", {
+                    const response = await fetch("https://volmant.onrender.com/api/create-checkout-session", {
                       method: "POST",
                       headers: { "Content-Type": "application/json" },
                       body: JSON.stringify({ amount: totalAmount * 100 }) // amount in paise

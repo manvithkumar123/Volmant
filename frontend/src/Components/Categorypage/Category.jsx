@@ -10,7 +10,7 @@ const Category = () => {
     const {type}=useParams();
  
     useEffect(()=>{
-        axios.get(`/api/${type}/view`)
+        axios.get(`https://volmant.onrender.com/api/${type}/view`)
         .then(res=>setdata(res.data))
         .catch(err=>console.log(err))
     }, [type]);
