@@ -1,0 +1,143 @@
+.dashboard_page{
+    height: max-content;
+    min-height: 100vh;
+    width: 100vw;
+    background-color: var( --bg-color);
+}
+.dashboard_page button{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#logout{
+    background-color:#ee5f68;
+}
+.customer_form{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.customer_form form{
+    height:120px !important;
+}
+.profile_section{
+    width: 100vw;
+    padding-top: 50px;
+    color: var( --text-color);
+    font-family: var(--font-family);
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.welcome_text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 220px;
+    height: max-content;
+    padding: 0px 10px 0 10px;
+}
+.welcome_text img{
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+}
+.button_container{
+    gap: 10px;
+    display: flex;
+}
+.button_container button{
+    border: none;
+    height: 40px;
+    width: 200px;
+    border-radius: 7px;
+    font-size: large;
+}
+.crud_operations{
+    height: max-content;
+    width: max-content;
+    display: flex;
+    gap: 5px;
+    padding-top: 30px;
+}
+.crud_operations button{
+    height: 40px;
+    border-radius: 7px;
+    width: 150px;
+}
+.crud_container{
+    display: flex;
+    gap: 10px;
+    width: max-content;
+    height: max-content;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+.crud_container form{
+    height: 600px;
+    width: 500px;
+    background-color: var(--shape-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    border-radius: 7px;
+    gap: 10px;
+    color: var(--formtext-color);
+}
+.delete_view{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.delete_view form button{
+    height: 40px;
+    padding: 0px 10px 0px 10px;
+}
+.delete_view form{
+    height: 200px;
+    width: 300px;
+}
+form input{
+    width: 250px;
+    height: 30px;
+    padding: 0px 0px 0px 10px ;
+}
+form textarea{
+    height: 177px;
+    width: 301px;
+    padding: 10px 0px 0px 10px;
+    resize: none;
+}
+form button{
+    height: 30px;
+    width: 150px;
+    border-radius: 7px;
+}
+.forms_container{
+    display: flex;
+    width: max-content;
+    height: max-content;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.promoted_form{
+    height: max-content !important;
+    background-color: red;
+    min-height: none;
+}
+.customer_form2{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.customer_form2 form{
+    min-height: 100px;
+    height: max-content;
+}

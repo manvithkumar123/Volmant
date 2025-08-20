@@ -1,0 +1,150 @@
+.Login_page{
+    height: max-content;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 30px;
+    background-color: var(--bg-color);
+}
+.Login_page form button{
+    background-color: #016598;
+    font-family: var(--font-family-reg);
+    font-weight: 600 !important;
+    width: 260px;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    font-size: larger;
+}
+#login{
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 30px;
+    margin-right: 15px;
+}
+.login_container{
+    display: flex;
+    flex-direction: column;
+    color: var(--text-color);
+}
+.signup_container{
+    display: flex;
+    flex-direction: column;
+    color: var(--formtext-color);
+    background-color: var(--brand-bg) ;
+    padding: 10px;
+    width: 300px;
+    display: flex;
+    height: max-content;
+    margin-top: 40px;
+    min-height: 300px;
+    flex-direction: column;
+    padding-left: 30px;
+    border-radius: 10px;
+
+}
+.signup_container h1{
+    text-align: center;
+    margin-right: 15px;
+}
+#newuser{
+    text-align: right;
+    margin-top: 5px;
+}
+.login_container{
+    padding: 10px;
+    width: 300px;
+    display: flex;
+    height: max-content;
+    min-height: 400px;
+    justify-content: center;
+    flex-direction: column;
+}
+.suggestions{
+    width: 100vw;
+    height: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+.signup_page{
+    width: 100vw;
+    height:100%;
+    position: absolute;
+    left: 0;
+    top: 100px;
+    z-index: 9999;
+    background-color:rgba(0, 0, 0, 0.6);;
+    display: flex;
+    justify-content: center;
+}
+.text_close{
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    width: 100%;
+}
+.text_close h1{
+    text-align: center;
+    margin-left: auto;
+}
+.text_close svg{
+    margin-left: auto;
+    margin-top: 10px;
+    fill: var(--formtext-color);
+}
+#hash_text{
+    font-size:12px;
+    margin-top: 4px;
+}
+.welcome_page{
+    width: 100vw;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px;
+}
+.login_card{
+    height: 300px;
+    width: max-content;
+    background-color: var(--brand-bg);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    padding-left: 10px;
+    color: var(--bg-color);
+}
+.login_card i {
+    color: var(--bg-color);
+}
+.login_card button{
+    width: 100px !important;
+}
+#form_login_sucess{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+#form_login_sucess button{
+    font-size: 17px;
+    cursor: pointer;
+}
+#form_login_sucess button:nth-child(2){
+    background-color:  #ee5f68 ;
+}
+.login_card h5{
+    margin-top: 10px;
+    text-align: center;
+}

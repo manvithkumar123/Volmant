@@ -1,0 +1,287 @@
+.homepage{
+    background-color: var(--bg-color);
+    height: max-content;
+    width: 100vw;
+    padding-top: 50px;
+}
+.intro_video_background{
+    height: 600px;
+    width: 100vw;
+    background-color: var(--bg-color);
+}
+.intro_video_background video{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.premium_watches{
+    width: 100vw;
+    height: max-content;
+    background-color: var(--bg-color);
+    justify-content: center;
+    padding-bottom: 50px;
+    display: flex;
+    align-items: center;
+    padding-top: 100px;
+}
+.watch_vertical_container{
+    height: 100%;
+    width: 450px;
+    margin-bottom: 10px;
+    padding: 10px 0 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.premium_watch_container{
+    height: 350px;
+    width: 350px;
+    position: relative;
+    border-radius: 7px;
+}
+.watch_horizontal_container{
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: max-content;
+    width: max-content;
+    border-radius: 7px;
+    flex-direction: column;
+}
+.premium_watch_container img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 7px;
+}
+.premium_watch_container_side{
+    height: 500px;
+    width: 650px;
+    border-radius: 7px;
+}
+.label{
+    margin-top: 50px;
+}
+.label h1{
+    font-size: 50px;
+    font-family: var(--font-family);
+    color: var(--text-color);
+}
+.premium_watch_container_side img{
+    height: 100%;
+    width:  100%;
+    object-fit: cover;
+    border-radius: 7px;
+}
+.category_page{
+    height: max-content;
+    width: 100vw;
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex_container_category{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.watch_category{
+    height: 400px;
+    width: 500px;
+    margin: 15px;
+    position: relative;
+    border-radius: 7px;
+}
+.watch_category img{
+    object-fit: cover;
+    height: 100%;
+    border-radius: 7px;
+    width: 100%;
+}
+.brands_container{
+    width: 100vw;
+    display: flex;
+    margin-top: 50px;
+    height: max-content;
+    justify-content: space-evenly;
+}
+.collabration_brand{
+    height: 70px;
+    width: 290px;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: var(--brand-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.collabration_brand img{
+    height: 150%;
+    width: 150%;
+    object-fit: contain;
+}
+.collabration_brand:nth-child(3) img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.premium_watch_container:hover{
+    transform: scale(1.03);
+    cursor: pointer;
+}
+.premium_watch_container_side:hover{
+    transform: scale(1.03);
+    cursor: pointer;
+}
+.watch_category:hover{
+    transform: scale(1.03);
+    cursor: pointer;
+}
+.premium_watch_container:hover .cover_text{
+    display: flex !important;
+}
+.premium_watch_container_side:hover .cover_text{
+    display: flex !important;
+}
+.watch_category:hover .cover_text{
+    display: flex !important;
+}
+.cover_text{
+    background-color: #10110c;
+    opacity: 60%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+    max-width: 700px;
+    display: none !important;
+    max-height: 500px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    -webkit-animation: scale-up-ver-bottom 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: scale-up-ver-bottom 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+.text_container_hover{
+    color: white;
+    opacity: 100%;
+    margin-top: auto;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+@media screen and (max-width:768px) {
+    .intro_video_background video{
+        object-fit: contain;
+    }
+    .intro_video_background{
+        height: 200px;
+        background-color: transparent;
+    }
+    .premium_watches{
+        display: flex;
+        flex-direction: column;
+    }
+    .watch_vertical_container{
+        justify-content: center;
+        align-items: center;
+    }
+    .premium_watch_container{
+        height: 250px;
+        margin-top: 15px !important;
+        width:  250px;
+    }
+    .premium_watch_container_side{
+        height: 250px;
+        width: 250px;
+    }
+    .label{
+        display: none;
+    }
+    .watch_category{
+        height: 150px;
+        width: 150px;
+    }
+    #premium_text{
+        width: max-content;
+    }
+    .collabration_brand:nth-child(3){
+        display: none;
+    }
+    .collabration_brand:nth-child(4){
+        display: none;
+    }
+    .text_container_hover{
+        font-size: 11px;
+    }
+
+}
+@media screen and (max-height:450px) {
+    .premium_watch_container_side{
+        width: 300px;
+        height: 300px;
+    }
+    .premium_watch_container{
+        width: 300px;
+        height: 300px;
+    }
+    .watch_horizontal_container{
+        justify-content: center;
+        align-items: center;
+    }
+    #premium_text{
+        width: max-content;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .premium_watch_container_side{
+        width: 300px;
+        height: 300px;
+    }
+    .premium_watch_container{
+        width: 300px;
+        height: 300px;
+    }
+    .watch_horizontal_container{
+        justify-content: center;
+        align-items: center;
+    }
+}
+@-webkit-keyframes scale-up-ver-bottom {
+    0% {
+      -webkit-transform: scaleY(0.4);
+              transform: scaleY(0.4);
+      -webkit-transform-origin: 0% 100%;
+              transform-origin: 0% 100%;
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+      -webkit-transform-origin: 0% 100%;
+              transform-origin: 0% 100%;
+    }
+  }
+  @keyframes scale-up-ver-bottom {
+    0% {
+      -webkit-transform: scaleY(0.4);
+              transform: scaleY(0.4);
+      -webkit-transform-origin: 0% 100%;
+              transform-origin: 0% 100%;
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+      -webkit-transform-origin: 0% 100%;
+              transform-origin: 0% 100%;
+    }
+  }
+  

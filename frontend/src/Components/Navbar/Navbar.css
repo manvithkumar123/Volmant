@@ -1,0 +1,123 @@
+@font-face {
+    font-family: 'Proxima Nova1';
+    src: url('/Fonts/ProximaNova/proximanova_regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+  
+  @font-face {
+    font-family: 'Proxima Nova_bold';
+    src: url('/Fonts/ProximaNova/proximanova_bold.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+}
+:root {
+    --bg-color: white;
+    --text-color: black;
+    --font-family:'Proxima Nova_bold';
+    --font-family-reg:'Proxima Nova1';
+    --brand-bg:black;
+    --shape-color: black;
+    --formtext-color:white;
+}
+
+[data-theme='dark'] {
+    --bg-color: #121212;
+    --text-color: white;
+    --shape-color: white;
+    --brand-bg:white;
+    --formtext-color:black;
+    --filter-svg:invert(1);
+  }
+
+  *{
+    transition: all 0.5s ease;
+  }
+.Navbar{
+    width: 100vw;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    background-color: var(--bg-color);
+}
+.dark-light-toggler{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    background-color: #D7D7D7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.main_navbar{
+    margin-left: 10px;
+    height: 50px;
+    width: 446px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #D7D7D7;
+}
+.main_navbar h3{
+    margin-left: 10px;
+    font-family: 'Proxima Nova_bold' ;
+}
+.options{
+    width: max-content;
+    height: 50px;
+    max-width: 280px;
+    min-width: 180px;
+    border-radius: 50px;
+    background-color: #D7D7D7;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 5px 0 5px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.toggler_button{
+    height: 100%;
+    width: 100%;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.select_options{
+    width: 18px;
+    text-align: center;
+}
+@media screen and (max-width:1080px) {
+    *{
+        cursor: default;
+    }
+    .options{
+        width: 100px;
+        min-width: 100px !important;
+    }
+    .phone_navbar{
+        height: 50px;
+        width: 200px;
+        margin-left: 10px;
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+        background-color: #D7D7D7;
+    }
+    .main_navbar{
+        display: none !important;
+    }
+    #hide_phone{
+        display: none;
+    }
+    #show_phone{
+        display: block !important;
+    }
+
+}
