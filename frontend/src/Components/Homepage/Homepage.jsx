@@ -12,7 +12,7 @@ const Homepage = () => {
   };
   const [data,setdata]=useState();
   useEffect(()=>{
-    axios.get("/api/promoted/view")
+    axios.get("https://volmant.onrender.com/api/promoted/view")
     .then(res=>{setdata(res.data)
     })
     .catch(error=>console.log(error))
