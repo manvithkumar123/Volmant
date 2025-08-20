@@ -1,4 +1,12 @@
 require('dotenv').config();
+console.log(
+  "Stripe Key Loaded:",
+  process.env.STRIPE_SECRET_KEY ? "✅" : "❌",
+  process.env.STRIPE_SECRET_KEY ? process.env.STRIPE_SECRET_KEY.slice(0,10)+"..." : ""
+);
+if (!process.env.STRIPE_SECRET_KEY) {
+  throw new Error("❌ STRIPE_SECRET_KEY is missing. Check your .env file or Render Environment Variables.");
+}
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 const express = require("express");
 const app = express();
@@ -12,6 +20,7 @@ const LoginRoute = require("./Routes/LoginRoute");
 const PromotedRoute = require("./Routes/PromotedRoute");
 const Cartroute = require("./Routes/CartRoute");
 const cookieParser = require("cookie-parser");
+
 
 
 app.use(cookieParser());
@@ -72,4 +81,5 @@ cancel_url: "https://volmant.netlify.app/cancel",
   }
 });
 
-app.listen(3000);
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
