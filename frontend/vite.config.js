@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://volmant.onrender.com/',
+        target: 'https://volmant.onrender.com',
         changeOrigin: true,
         secure: false,
       }
