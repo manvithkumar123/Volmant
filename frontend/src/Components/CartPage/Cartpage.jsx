@@ -64,18 +64,6 @@ const Cartpage = () => {
     }
   };
 
-  if (!isLogged) {
-    return (
-      <div className='login_error_page'>
-        <h1>Login to View Cart</h1>
-        <img src="https://res.cloudinary.com/dvd8yytqv/image/upload/v1754913535/30249018-removebg-preview_qpbfql.png" alt="" style={{height:"300px",width:"400px"}} />
-        <div className="button_container_loginerror">
-          <button onClick={()=>{navigate("/")}}>Home page</button>
-          <button onClick={()=>{navigate('/Login')}}>Login Page</button>
-        </div>
-      </div>
-    );
-  }
   // Helper function to map DB values to user-friendly names
   const formatType = (type) => {
     switch (type) {
