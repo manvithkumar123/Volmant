@@ -23,7 +23,7 @@ return (
         <div className="intro_video_background">
         <video src="https://res.cloudinary.com/dvd8yytqv/video/upload/v1753872908/1753461599781_tibayl.mov"  autoPlay loop playsInline muted></video>
         </div>
-    <div className="premium_watches">
+    {/* <div className="premium_watches">
       {data?.length >= 3 ? (
         <>
           <div className="watch_vertical_container">
@@ -116,7 +116,7 @@ return (
           Loading premium watches...
         </div>
       )}
-    </div>
+    </div> */}
     <div className="category_page">
         <div className="flex_container_category">
             <div className="watch_category" onClick={() => navigate('/Product/analog')} style={{ cursor: 'pointer' }}>
