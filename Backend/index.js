@@ -17,7 +17,7 @@ const cookieParser = require("cookie-parser");
 app.use(cookieParser());
 
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: "https://volmant.netlify.app",
   credentials: true
 }));
 app.use(express.json());
@@ -58,8 +58,8 @@ app.post("/api/create-checkout-session", async (req, res) => {
         },
       ],
       mode: "payment",
-      success_url: "http://localhost:5173/success",
-      cancel_url: "http://localhost:5173/cancel",
+      success_url: "https://volmant.netlify.app/success",
+cancel_url: "https://volmant.netlify.app/cancel",
     });
 
     console.log("=== Stripe session created ===");
