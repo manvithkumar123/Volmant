@@ -13,7 +13,12 @@ router.post("/signup", async (req, res) => {
       bcrypt.hash(Password, salt, async (err, hash) => {
         const newUser = await loginSchema.create({ Username, Password: hash });
         const token = jwt.sign({ username: Username, userid: newUser._id }, "manvith");
-        res.cookie("token", token);
+        res.cookie("token", token, {
+          httpOnly: true,
+          secure: process.env.NODE_ENV === "production",
+          sameSite: "None",
+          maxAge: 7 * 24 * 60 * 60 * 1000
+        });
         res.status(201).json({ message: "User created successfully" });
       });
     });
@@ -28,7 +33,12 @@ router.post("/login",async(req,res)=>{
 
   if(Username==="Manvith"&&Password==="project3"){
     const token = jwt.sign({ username: Username, role: "admin" }, "manvith",);
-    res.cookie("token", token);
+    res.cookie("token", token, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "None",
+      maxAge: 7 * 24 * 60 * 60 * 1000
+    });
     return res.json({adminlogin:true})
   }
   let enteredUsername = await loginSchema.findOne({Username})
@@ -39,14 +49,24 @@ router.post("/login",async(req,res)=>{
       { username: Username, userid: enteredUsername._id, role: "user" }, 
       "manvith"
     );
-    res.cookie("token", token);
+    res.cookie("token", token, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "None",
+      maxAge: 7 * 24 * 60 * 60 * 1000
+    });
     res.status(200).json("login Sucessful");
   } else {
     res.status(401).json({ message: "An error occured check username and password" });
   }
 })
 router.get("/logout",(req,res)=>{
-  res.cookie('token',"");
+  res.cookie("token", "", {
+    httpOnly: true,
+    securef: process.env.NODE_ENV === "production",
+    sameSite: "None",
+    expires: new Date(0)
+  });
   res.redirect("/")
 })
 router.get("/userlist",async(req,res)=>{
