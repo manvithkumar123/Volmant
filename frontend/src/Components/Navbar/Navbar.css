@@ -72,6 +72,7 @@
     max-width: 280px;
     min-width: 180px;
     border-radius: 50px;
+    position: relative;
     background-color: #D7D7D7;
     display: flex;
     justify-content: space-evenly;
@@ -79,6 +80,20 @@
     padding: 0 5px 0 5px;
     margin-left: 10px;
     cursor: pointer;
+}
+.phone_dropdown{
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    width: max-content;
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    top: 35px;
+    left: 70px;
+    border-radius: 10px;
+    color: var(--text-color);
 }
 .toggler_button{
     height: 100%;
