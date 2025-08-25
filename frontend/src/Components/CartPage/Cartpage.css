@@ -2,9 +2,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 60px;
     flex-direction: column;
     height: max-content;
     background-color: var(--bg-color);
+    margin: 0 !important;
 }
 .cart_logo_buy{
     display: flex;
@@ -102,7 +104,7 @@
     width: 100vw;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 100px;
 }
 .line_container p{
     color: var(--text-color);
@@ -166,6 +168,9 @@
     }
     .cart_items_container{
         height: 200px;
+    }
+    .cart_selected_items{
+        width: 350px;
     }
     .line_container{
         margin-top: 50px;

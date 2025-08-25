@@ -127,7 +127,7 @@ const LoginPage = () => {
           }
           </div>
         </div>
-      ) : (
+       ) : (
         <form onSubmit={handleLogin}>
           <div className="login_container">
             <h2 id='login'>LOGIN</h2>
@@ -139,7 +139,8 @@ const LoginPage = () => {
             <a id='newuser' onClick={() => setSignup(true)} style={{cursor:'pointer'}}>New user sign up?</a>
           </div>
         </form>
-      )}
+      )
+}
       {signup ?
       <div className='signup_page'>
         <form onSubmit={handleSignup}>
