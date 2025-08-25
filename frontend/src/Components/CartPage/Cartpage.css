@@ -4,6 +4,7 @@
     align-items: center;
     padding-top: 60px;
     flex-direction: column;
+    overflow: hidden;
     height: max-content;
     background-color: var(--bg-color);
     margin: 0 !important;
@@ -74,6 +75,7 @@
     width: 100vw;
     gap: 50px;
     height: max-content;
+    overflow: hidden;
     justify-content: center;
     align-items: center;
 }
