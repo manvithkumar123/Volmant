@@ -112,7 +112,7 @@ return (
           </div>
         </>
       ) : (
-        <div style={{ textAlign: "center", padding: "40px", fontSize: "1.5em" }}>
+        <div className='loading_homepage' style={{ textAlign: "center", padding: "40px", fontSize: "1.5em" }}>
           Loading premium watches...
         </div>
       )}

@@ -9,6 +9,9 @@
     width: 100vw;
     background-color: var(--bg-color);
 }
+.loading_homepage{
+    color: var(--text-color);
+}
 .intro_video_background video{
     height: 100%;
     width: 100%;
