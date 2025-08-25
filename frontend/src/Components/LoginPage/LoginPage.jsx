@@ -160,11 +160,35 @@ const LoginPage = () => {
       </div>
       :null}
       {admin ? (null):
-      <div className="suggestions">
-        <div className="product_card"></div>
-        <div className="product_card"></div>
-        <div className="product_card"></div>
-      </div>
+              <div className="suggestions" style={{marginTop:"30px"}}>
+              <div className="product_card"> 
+                <div className="image_container"><img src="https://res.cloudinary.com/dvd8yytqv/image/upload/v1755698624/3013-1_hisek6.jpg" alt=""/></div>
+                 <div className="cover_text"onClick={()=>{navigate("/product/analog")}} >
+                <div className="text_container_hover">
+                <h1>Analog</h1>
+                <h4>Timeless Precision, Classic Style</h4>
+                </div>
+                </div>
+                </div>
+              <div className="product_card"> 
+                <div className="image_container"><img src="https://res.cloudinary.com/dvd8yytqv/image/upload/v1755698625/photo-1524592094714-0f0654e20314_kcvlup.jpg" alt=""/></div>
+                 <div className="cover_text"onClick={()=>{navigate("/product/retro")}} >
+                <div className="text_container_hover">
+                <h1>Retro</h1>
+                <h4>Classic Charm, Modern Legacy</h4>
+                </div>
+                </div>
+                </div>
+              <div className="product_card"> 
+                <div className="image_container"><img src="https://res.cloudinary.com/dvd8yytqv/image/upload/v1755698698/51XGrwhczrL_cdsp02.jpg" alt=""/></div>
+                 <div className="cover_text" onClick={()=>{navigate("/product/smartwatch")}}>
+                <div className="text_container_hover">
+                  <h1>Smart Watches</h1>
+                  <h4>Technology on Your Wrist</h4>
+                </div>
+                </div>
+                </div>
+            </div>
 }
     </div>
   )
