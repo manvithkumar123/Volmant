@@ -5,7 +5,7 @@ const RetroModule = require("../Databases/RetroModule");
 
 router.post("/create",async(req,res)=>{
    try{ let {watchname,ImageUrl,Rupee,Dollar,Euro,specification,gender}=req.body;
-    const createDigital = new DigitalSchema({
+    const retroSchema = new RetroModule({
         watchname,
         ImageUrl,
         Rupee,
@@ -14,7 +14,7 @@ router.post("/create",async(req,res)=>{
         specification,
         gender,
     })
-    await createDigital.save()
+    await retroSchema.save()
     res.send("done")
     }catch(error){
         res.status(400).send({error:"unknown error occured in saving digital"})
@@ -32,24 +32,24 @@ router.get("/view", async (req,res)=>{
 router.post("/edit",async(req,res)=>{
     try{
         const {edit_id}= req.body;
-        const digital = await DigitalSchema.findById(edit_id)
-        if(!digital){
+        const retroedit = await RetroModule.findById(edit_id)
+        if(!retroedit){
             res.status(400).send("error occured check whether id is present")
         }
         const updatedFields = ["watchname", "ImageUrl", "Rupee", "Dollar", "Euro", "specification", "gender"];
         updatedFields.forEach((key) => {
             if (req.body[key] !== undefined) {
-                digital[key] = req.body[key];
+                retroedit[key] = req.body[key];
             }
         });
-        await digital.save()
+        await retroedit.save()
         res.send("sucessful")
     }catch(error){
         res.status(404).send({error:"error occured"})
     }
 })
 router.post("/deleteall",async(req,res)=>{
-   try{ await DigitalSchema.deleteMany({});
+   try{ await RetroModule.deleteMany({});
     res.send("Deleted")
     }catch(error){
         res.status(404).send({error:"an error occured wile deleting all"})
@@ -57,7 +57,7 @@ router.post("/deleteall",async(req,res)=>{
 })
 router.post("/deleteid",async(req,res)=>{
     try{let {deletebyid}=req.body;
-    const deleteid = await DigitalSchema.findByIdAndDelete(deletebyid)
+    const deleteid = await RetroModule.findByIdAndDelete(deletebyid)
     res.send("Deleted")
     } catch(error){
         res.status(400).send({error:"an error occured while deleting selected id"})
