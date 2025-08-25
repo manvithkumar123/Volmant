@@ -158,16 +158,20 @@
     color: white;
     cursor: pointer;
 }
-@media screen and (max-width:800px) {
+@media screen and (max-width:810px) {
     .cartpage_flex{
         flex-direction: column;
         padding-top: 50px;
+        padding-bottom: 30px;
     }
     .cart_page{
         margin-top: 150px;
     }
     .cart_items_container{
         height: 200px;
+    }
+    .total_value{
+        display: none !important;
     }
     .cart_selected_items{
         width: 350px;
