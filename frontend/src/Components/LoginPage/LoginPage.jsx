@@ -90,7 +90,7 @@ const LoginPage = () => {
   // Logout handler to clear localStorage and update state
   const handleLogout = (e) => {
     e.preventDefault();
-    axios.get("https://volmant.onrender.com/api/login/logout", { withCredentials: true })
+    axios.post("https://volmant.onrender.com/api/login/logout", { withCredentials: true })
       .then(() => {
         setLoggedIn(false);
         setadmin(false);
