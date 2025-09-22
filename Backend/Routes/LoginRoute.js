@@ -60,7 +60,7 @@ router.post("/login",async(req,res)=>{
     res.status(401).json({ message: "An error occured check username and password" });
   }
 })
-router.get("/logout", (req, res) => {
+router.post("/logout", (req, res) => {
   res.clearCookie("token", {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
