@@ -60,15 +60,14 @@ router.post("/login",async(req,res)=>{
     res.status(401).json({ message: "An error occured check username and password" });
   }
 })
-router.get("/logout",(req,res)=>{
-  res.cookie("token", "", {
+router.get("/logout", (req, res) => {
+  res.clearCookie("token", {
     httpOnly: true,
-    securef: process.env.NODE_ENV === "production",
+    secure: process.env.NODE_ENV === "production",
     sameSite: "None",
-    expires: new Date(0)
   });
-  res.redirect("/")
-})
+  res.status(200).json({ message: "Logged out successfully" });
+});
 router.get("/userlist",async(req,res)=>{
     try{
         let userlist= await loginSchema.find();
