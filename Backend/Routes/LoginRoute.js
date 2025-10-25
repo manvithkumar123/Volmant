@@ -61,11 +61,7 @@ router.post("/login",async(req,res)=>{
   }
 })
 router.post("/logout", (req, res) => {
-  res.clearCookie("token", {
-    httpOnly: true,
-    secure: process.env.NODE_ENV === "production",
-    sameSite: "None",
-  });
+  res.clearCookie("token", { httpOnly: true, secure: true, sameSite: 'None' });
   res.status(200).json({ message: "Logged out successfully" });
 });
 router.get("/userlist",async(req,res)=>{
