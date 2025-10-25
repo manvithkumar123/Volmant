@@ -97,6 +97,7 @@ const LoginPage = () => {
         setUsername('');
         localStorage.removeItem("role");
         localStorage.removeItem("userId");
+        localStorage.removeItem("token");
         navigate("/"); // Optionally navigate to home or login page after logout
       })
       .catch(err => {
